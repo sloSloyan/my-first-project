@@ -1,4 +1,9 @@
 import styles from './SocialLinks.module.scss';
+import telegramIcon from '../../../assets/icon/telegram.png';
+import vkIcon from '../../../assets/icon/vk.png';
+import githubIcon from '../../../assets/icon/github.png';
+import dribbbleIcon from '../../../assets/icon/dribble.png';
+
 
 export const SocialLinks = () => {
   const socials = [
@@ -11,16 +16,17 @@ export const SocialLinks = () => {
   return (
     <div className={styles.socialLinks}>
       {socials.map(social => (
-        <a 
+        <div 
           key={social.name}
-          href={`https://${social.icon}.com/yourcompany`} 
-          target="_blank"
           rel="noopener noreferrer"
           aria-label={social.name}
           className={styles.socialLink}
         >
-          <i className={`icon-${social.icon}`}></i>
-        </a>
+         {social.icon === 'telegram' && <img className={styles.iconImage} src={telegramIcon} />}
+         {social.icon === 'vk' && <img className={styles.iconImage} src={vkIcon} />}
+         {social.icon === 'github' && <img className={styles.iconImage} src={githubIcon} />}
+         {social.icon === 'dribbble' && <img className={styles.iconImage} src={dribbbleIcon} />}
+        </div>
       ))}
     </div>
   );
