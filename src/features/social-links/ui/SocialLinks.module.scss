@@ -29,3 +29,13 @@
     &.icon-github::before { content: '\e903'; }
     &.icon-dribbble::before { content: '\e904'; }
   }
+
+  .iconImage{
+      width: 50px;
+      max-width: 100%;
+      height: auto;
+      display: block; 
+      &:hover{
+        cursor: pointer;
+      }
+    }
