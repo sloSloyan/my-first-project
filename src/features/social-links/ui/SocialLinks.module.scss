@@ -1,0 +1,31 @@
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: var(--transition-base);
+  
+    &:hover {
+      background: var(--color-primary);
+      transform: translateY(-3px);
+    }
+  
+    &::before {
+      font-family: 'icomoon';
+      font-size: 1.2rem;
+    }
+  
+    &.icon-telegram::before { content: '\e901'; }
+    &.icon-vk::before { content: '\e902'; }
+    &.icon-github::before { content: '\e903'; }
+    &.icon-dribbble::before { content: '\e904'; }
+  }

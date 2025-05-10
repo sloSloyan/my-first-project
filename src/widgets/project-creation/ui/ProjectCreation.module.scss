@@ -1,0 +1,189 @@
+.section {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #f9fafc, #eef2f6);
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--color-dark);
+    position: relative;
+  
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--color-primary);
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+  }
+  
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .step {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-base);
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .stepNumber {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .stepTitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+  }
+  
+  .stepText {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formTitle {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-dark);
+  }
+  
+  .formGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    transition: var(--transition-base);
+  
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+    }
+  }
+  
+  .btn {
+    display: flex;
+        justify-content: center;
+        padding: 20px 0 0 0;
+  }
+
+  .submitButton {
+    // width: 100%;
+    // margin-top: 1.5rem;
+    // padding: 1rem;
+    // font-size: 1.1rem;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: white;
+    color: var(--color-primary);
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition-base);
+    max-width: 300px;
+    border: 1px solid;
+    &:hover {
+        cursor: pointer;
+        background: var(--color-primary);
+        color: white;
+    }
+  }
+
+  .inputWrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .requiredMark {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--color-danger);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    transition: var(--transition-base);
+    padding-right: 2rem; // Для звездочки
+    
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+    }
+    
+    &.error {
+      border-color: var(--color-danger);
+      
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(247, 37, 133, 0.2);
+      }
+    }
+  }
+  
+  .errorText {
+    display: block;
+    color: var(--color-danger);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  // Для текстового поля
+  textarea {
+    + .requiredMark {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+  }

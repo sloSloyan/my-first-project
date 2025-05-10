@@ -1,0 +1,155 @@
+.page {
+    padding-top: 6rem;
+    min-height: 100vh;
+  }
+  
+  .hero {
+    padding: 4rem 0;
+    text-align: center;
+    
+    &__title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(45deg, var(--color-primary), var(--color-danger));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.2;
+    }
+    
+    &__subtitle {
+      font-size: 1.2rem;
+      color: rgba(0, 0, 0, 0.7);
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+    
+    &__card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: var(--transition-base);
+      
+      &:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--color-primary);
+      }
+    }
+  }
+  
+  .cta {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+    color: white;
+    border-radius: 20px;
+    margin: 4rem 0;
+    
+    &__title {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    &__button {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: white;
+      color: var(--color-primary);
+      border-radius: 50px;
+      font-weight: 600;
+      transition: var(--transition-base);
+      
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .ctaButton {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+  
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
+      
+      &::before {
+        left: 100%;
+      }
+      
+      .buttonIcon {
+        transform: translateX(5px);
+      }
+    }
+  
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+  
+  .buttonText {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+  
+  .buttonIcon {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .containerProject{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+    padding: 0;
+  }

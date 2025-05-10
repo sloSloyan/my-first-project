@@ -1,0 +1,15 @@
+.logo {
+    font-family: var(--font-accent);
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoPrimary {
+    color: white;
+  }
+  
+  .logoSecondary {
+    color: var(--color-primary);
+  }
